@@ -14,6 +14,25 @@ gv_experiments/finetuning*
 gv_experiments/new_training*
 compound_lists/*
 gv_experiments/training_scripts/train_ResAMR_classifier.textClipping
+gv_experiments/models/data_loaders_Giovanni.py
+gv_experiments/models/data_loaders_old.py
+gv_experiments/models/data_loaders.py
+gv_experiments/models/data_utils_versionGiovanni.py
+gv_experiments/models/res_vae.py
+gv_experiments/models/vae.py
+gv_experiments/models/vqvae.py
+gv_experiments/training_scripts/DRIAMS_baselines_eval.py
+gv_experiments/training_scripts/train_1hotSpecies_ResAMR_classifier.py
+gv_experiments/training_scripts/train_JointPCA_LR_classifier.py
+gv_experiments/training_scripts/train_recommender_ResAMR.py
+gv_experiments/training_scripts/train_ResAMR_classifier_Jan25.py
+gv_experiments/training_scripts/train_ResAMR_classifier_leo.py
+gv_experiments/training_scripts/train_ResAMR_classifier_single_species_comparison.py
+gv_experiments/training_scripts/train_ResAMR_classifier.py
+gv_experiments/training_scripts/train_ResMLP_classifier_smiles_loop.py
+gv_experiments/training_scripts/train_SplitPCA_LR_classifier.py
+gv_experiments/README.md
+gv_experiments/requirements.txt
 
 test.py
 
