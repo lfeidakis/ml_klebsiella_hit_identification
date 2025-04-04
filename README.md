@@ -1,5 +1,7 @@
 # Leveraging Predictive AMR Models for Hit Identification in *Klebsiella pneumoniae*
 
+![Pipeline Overview](pipeline.png)
+
 This repository implements a focused workflow for identifying potential antimicrobial hits against *Klebsiella pneumoniae*, leveraging components from the [MultimodalAMR](https://github.com/BorgwardtLab/MultimodalAMR) project. Only the code necessary to run and extend the ResMLP classifier model is included. Please refer to the original repository for full architecture details, dataset preparation, and package requirements.
 
 Candidate compounds are selected from the [Enamine REAL Hit Locator Library](https://enamine.net/compound-libraries/diversity-libraries/hit-locator-library-460), a commercially available compound library containing approximately 460,000 chemicals. The original `.sdf` file provided by Enamine was processed to generate two CSV files:
