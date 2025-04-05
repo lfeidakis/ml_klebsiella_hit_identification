@@ -9,7 +9,9 @@ Candidate compounds are selected from the [Enamine REAL Hit Locator Library](htt
 1. One file contains the molecular properties provided by the vendor as well as Morgan fingerprints (1024 bits) for each compound. Compounds with identical fingerprints were considered duplicates and removed.
 2. The second file includes the same molecular properties and Morgan fingerprints, along with Molformer embeddings for each compound. Duplicate entries based on identical Molformer embeddings were also removed.
 
-Both files are included in the compound list archive, which can be downloaded [here](https://drive.google.com/drive/folders/1BskzBQZoI-ezUXUrzfXGV7aHwV1Rp4Tm?usp=sharing).
+Both files are included in the compound list archive, which can be downloaded [here](https://drive.google.com/drive/folders/1BskzBQZoI-ezUXUrzfXGV7aHwV1Rp4Tm?usp=sharing). This folder must be added to the root folder of the project.
+
+Data and model checkpoints/configurations can be found [here]() and should also be added to the root folder of the project. 
 
 
 The following five Jupyter notebooks form the core of the pipeline:
