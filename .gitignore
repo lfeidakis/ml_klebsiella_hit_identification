@@ -36,6 +36,7 @@ gv_experiments/requirements.txt
 
 test.py
 
+.DS_Store
 
 job.sh
 job.sub
