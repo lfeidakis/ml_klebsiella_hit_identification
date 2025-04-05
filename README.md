@@ -11,8 +11,15 @@ Candidate compounds are selected from the [Enamine REAL Hit Locator Library](htt
 
 Both files are included in the compound list archive, which can be downloaded [here](https://drive.google.com/drive/folders/1BskzBQZoI-ezUXUrzfXGV7aHwV1Rp4Tm?usp=sharing). This folder must be added to the root folder of the project.
 
-Data and model checkpoints/configurations can be found [here]() and should also be added to the root folder of the project. 
-
+The full DRIAMS dataset and all necessary model checkpoints/configuration files can be downloaded from [here](link). The dataset includes samples from all hospitals (A, B, C, and D) and all available years. The provided folder contains:  
+• known (sample, drug, response) triplet outcomes  
+• raw binned MALDI-TOF spectra  
+• MAE embeddings of the spectra  
+• the full train/validation/test split  
+• model checkpoints and configuration files for two setups: `ResMLP_raw_morgan` and `ResMLP_MAE_Molformer`  
+  
+After downloading, the contents should be placed in the root directory of the project for everything to run as expected.
+ 
 
 The following five Jupyter notebooks form the core of the pipeline:
 - `sample_prefiltering`: Selects *K. pneumoniae* test samples from the dataset and applies two preselection filters based on model performance and known resistance profiles.
