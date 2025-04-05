@@ -25,4 +25,4 @@ Each notebook contains a detailed explanation of what its individual cells do. T
 
 Two training scripts are also included:
 - `finetune_ResMLP_classifier.py`: Fine-tunes the ResMLP classifier on *K. pneumoniae* samples.
-- `train_ResAMR_classifier_non_balanced_loss_weights.py`: Trains a ResAMR model from scratch using custom, unbalanced loss weights.
+- `train_ResAMR_classifier_non_balanced_loss_weights.py`: Trains a ResMLP model from scratch using custom, unbalanced loss weights.
