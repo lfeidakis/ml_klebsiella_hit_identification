@@ -11,7 +11,7 @@ Candidate compounds are selected from the [Enamine REAL Hit Locator Library](htt
 
 Both files are included in the compound list archive, which can be downloaded [here](https://drive.google.com/drive/folders/1BskzBQZoI-ezUXUrzfXGV7aHwV1Rp4Tm?usp=sharing). This folder must be added to the root folder of the project.
 
-The full DRIAMS dataset and all necessary model checkpoints/configuration files can be downloaded from [here](link). The dataset includes samples from all hospitals (A, B, C, and D) and all available years. The provided folder contains:  
+The full DRIAMS dataset and all necessary model checkpoints/configuration files can be downloaded from [here](https://drive.google.com/file/d/1ASajnwy5SnlfFVY_PO9MgOAPegCs72JM/view?usp=sharing). The dataset includes samples from all hospitals (A, B, C, and D) and all available years. The provided folder contains:  
 - known (sample, drug, response) triplet outcomes  
 - raw binned MALDI-TOF spectra  
 - MAE embeddings of the spectra  
