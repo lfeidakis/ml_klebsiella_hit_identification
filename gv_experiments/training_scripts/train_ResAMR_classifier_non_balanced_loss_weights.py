@@ -56,16 +56,11 @@ def main(args):
     split_idsList=args.split_ids
     dataset_investigated=args.driams_dataset
 
-    ## ADDED LEO ## 
-
     #Compute the weights for the loss function (to mitigate the effect of the imbalance in the dataset) 
-
     num_positives = (driams_long_table['response'] == 1).sum()
     num_negatives = (driams_long_table['response'] == 0).sum()
 
     config["pos_weight"] = [num_negatives / (num_positives + 1e-8)]
-
-    ## ADDED LEO ##
     
     # Instantate data split
     dsplit = DataSplitter(driams_long_table, dataset=args.driams_dataset)
@@ -74,10 +69,10 @@ def main(args):
     # Split selection for the different experiments.
     if args.split_type == "random":
         train_df, val_df, test_df = dsplit.random_train_val_test_split(val_size=0.1, test_size=0.2, random_state=args.seed)
-    ### Added Diane
+    
     elif args.split_type == "specific":
         train_df, val_df, test_df = dsplit.specific_train_val_test_split(split_idsList, dataset_investigated, driams_long_table)
-    ###
+    
     elif args.split_type =="drug_species_zero_shot":
         trainval_df, test_df = dsplit.combination_train_test_split(dsplit.long_table, test_size=0.2, random_state=args.seed)
         train_df, val_df = dsplit.baseline_train_test_split(trainval_df, test_size=0.2, random_state=args.seed)
@@ -246,10 +241,10 @@ if __name__=="__main__":
     parser.add_argument("--experiment_name", type=str, default="Leonidas4")
     parser.add_argument("--experiment_group", type=str, default="ResAMR")
     parser.add_argument("--output_folder", type=str, default="new_training")
-    ### Modified Diane
+    
     parser.add_argument("--split_type", type=str, default="specific", choices=["random", "specific", "drug_species_zero_shot", "drugs_zero_shot"])
     parser.add_argument("--split_ids", type=str, default="/Users/lfeidakis/Desktop/MultimodalAMR-main-updated/ABCD/data_splits.csv")
-    ###
+    
 
     parser.add_argument("--training_setup", type=int)
     parser.add_argument("--eval_importance", action="store_true")

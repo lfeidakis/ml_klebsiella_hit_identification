@@ -49,7 +49,7 @@ def main(args):
     seed = args.seed
 
     # Setup output folder to save results
-    finetune_folder = f"finetune/ResMLP_{sample_spectra_type}_{args.drug_emb_type}_{args.fingerprint_class}_pretrained_on:{args.pretrain_dataset}_finetuned_on:{args.finetune_dataset}_for_{args.n_epochs}_epochs_weight_decay:{args.weight_decay}_lr:{args.learning_rate}"
+    finetune_folder = f"finetune/ResMLP_{sample_spectra_type}_{args.drug_emb_type}_{args.fingerprint_class}_pretrained_on:ABCD_finetuned_on:ABCD_for_{args.n_epochs}_epochs_weight_decay:{args.weight_decay}_lr:{args.learning_rate}"
     if not exists(finetune_folder):
         os.makedirs(finetune_folder, exist_ok=True)
 
@@ -124,6 +124,7 @@ def main(args):
                         # limit_train_batches=6, limit_val_batches=4, limit_test_batches=4
                          )
     
+    # Metric Logger class to observe the losses and mcc_val during training 
 
     metrics = {"train_loss": [], "val_loss": [], "mcc_val": []}
 
@@ -201,9 +202,6 @@ if __name__=="__main__":
                         default="/Users/lfeidakis/Desktop/MultimodalAMR-main-updated/ABCD/ResultsAndCheckpoints/ABCD/MAE_Mol/new_loader_MAE_Mol_ABCD_DRIAMS-any_specific/0/lightning_logs/version_0/checkpoints/epoch=99-step=394700.ckpt")
     parser.add_argument("--config_path", type=str,
                         default="/Users/lfeidakis/Desktop/MultimodalAMR-main-updated/ABCD/ResultsAndCheckpoints/ABCD/MAE_Mol/new_loader_MAE_Mol_ABCD_DRIAMS-any_specific/config.json")
-
-    parser.add_argument("--pretrain_dataset", type=str, choices=['A2018', 'B2018', 'C2018', 'D2018', 'A18BCD', 'ABCD' ], default="ABCD")
-    parser.add_argument("--finetune_dataset", type=str, choices=['A2018', 'B2018', 'C2018', 'D2018', 'A18BCD', 'ABCD' ], default="ABCD")
 
     args = parser.parse_args()
     args.num_workers = os.cpu_count()

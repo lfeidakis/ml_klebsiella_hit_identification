@@ -33,6 +33,8 @@ gv_experiments/training_scripts/train_ResMLP_classifier_smiles_loop.py
 gv_experiments/training_scripts/train_SplitPCA_LR_classifier.py
 gv_experiments/README.md
 gv_experiments/requirements.txt
+gv_experiments/training_scripts/finetune_ResMLP_classifier2.py
+gv_experiments/training_scripts/finetuning.py
 
 test.py
 
